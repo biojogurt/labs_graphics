@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace CircleDraw
 {
     public partial class Form1 : Form
@@ -9,8 +11,7 @@ namespace CircleDraw
             InitializeComponent();
             numericUpDown1.Maximum = pictureBox1.Width;
             numericUpDown2.Maximum = pictureBox1.Height;
-            numericUpDown3.Maximum = pictureBox1.Width / 2;
-            numericUpDown4.Maximum = pictureBox1.Height / 2;
+            numericUpDown3.Maximum = pictureBox1.Width > pictureBox1.Height ? pictureBox1.Height / 2 : pictureBox1.Width / 2;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,74 +26,51 @@ namespace CircleDraw
         {
             int x0 = (int) numericUpDown1.Value;
             int y0 = (int) numericUpDown2.Value;
-            int rx = (int) numericUpDown3.Value;
-            int ry = (int) numericUpDown4.Value;
+            int r = (int) numericUpDown3.Value;
 
-            if (x0 - rx < 0 || y0 - ry < 0 || x0 + rx > pictureBox1.Width || y0 + ry > pictureBox1.Height)
+            if (x0 - r < 0 || y0 - r < 0 || x0 + r > pictureBox1.Width || y0 + r > pictureBox1.Height)
             {
                 MessageBox.Show("Выход за границу поля");
                 return;
             }
 
-            pictureBox1.Image = drawEllipse(x0, y0, rx, ry);
+            pictureBox1.Image = DrawCircle(x0, y0, r);
         }
 
-        private Bitmap drawEllipse(int x0, int y0, int rx, int ry)
+        private void DrawPixel(Bitmap bitmap, int x0, int y0, int x, int y)
+        {
+            bitmap.SetPixel(x + x0, y + y0, color);
+            bitmap.SetPixel(-x + x0, y + y0, color);
+            bitmap.SetPixel(x + x0, -y + y0, color);
+            bitmap.SetPixel(-x + x0, -y + y0, color);
+            bitmap.SetPixel(y + x0, x + y0, color);
+            bitmap.SetPixel(y + x0, -x + y0, color);
+            bitmap.SetPixel(-y + x0, x + y0, color);
+            bitmap.SetPixel(-y + x0, -x + y0, color);
+        }
+
+        private Bitmap DrawCircle(int x0, int y0, int r)
         {
             Bitmap bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
 
             int x = 0;
-            int y = ry;
-            int dx = 2 * ry * ry * x;
-            int dy = 2 * rx * rx * y;
-            double d1 = (ry * ry) - (rx * rx * ry) + (0.25 * rx * rx);
+            int y = r;
+            int d = 3 - (2 * r);
+            DrawPixel(bitmap, x0, y0, x, y);
 
-            while (dx < dy)
+            for (; x <= y; x++)
             {
-                bitmap.SetPixel(x + x0, y + y0, color);
-                bitmap.SetPixel(-x + x0, -y + y0, color);
-                bitmap.SetPixel(-x + x0, y + y0, color);
-                bitmap.SetPixel(x + x0, -y + y0, color);
-
-                x++;
-                dx += 2 * ry * ry;
-
-                if (d1 < 0)
-                {
-                    d1 += dx + (ry * ry);
-                }
-                else
+                if (d > 0)
                 {
                     y--;
-                    dy -= 2 * rx * rx;
-                    d1 += dx - dy + (ry * ry);
-                }
-            }
-
-            double d2 = (ry * ry * (x + 0.5) * (x + 0.5))
-                      + (rx * rx * (y - 1) * (y - 1))
-                      - (rx * rx * ry * ry);
-
-            while (y >= 0)
-            {
-                bitmap.SetPixel(x + x0, y + y0, color);
-                bitmap.SetPixel(-x + x0, -y + y0, color);
-                bitmap.SetPixel(-x + x0, y + y0, color);
-                bitmap.SetPixel(x + x0, -y + y0, color);
-
-                y--;
-                dy -= 2 * rx * rx;
-
-                if (d2 > 0)
-                {
-                    d2 += (rx * rx) - dy;
+                    d += (4 * (x - y)) + 10;
                 }
                 else
                 {
-                    x++;
-                    dx += 2 * ry * ry;
-                    d2 += dx - dy + (rx * rx);
+                    d += (4 * x) + 6;
                 }
+
+                DrawPixel(bitmap, x0, y0, x, y);
             }
 
             return bitmap;
@@ -102,8 +80,7 @@ namespace CircleDraw
         {
             numericUpDown1.Maximum = pictureBox1.Width;
             numericUpDown2.Maximum = pictureBox1.Height;
-            numericUpDown3.Maximum = pictureBox1.Width / 2;
-            numericUpDown4.Maximum = pictureBox1.Height / 2;
+            numericUpDown3.Maximum = pictureBox1.Width > pictureBox1.Height ? pictureBox1.Height / 2 : pictureBox1.Width / 2;
         }
     }
 }
