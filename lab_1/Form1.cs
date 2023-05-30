@@ -1,4 +1,4 @@
-namespace EllipsisDraw
+namespace CircleDraw
 {
     public partial class Form1 : Form
     {

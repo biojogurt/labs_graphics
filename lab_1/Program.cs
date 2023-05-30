@@ -1,4 +1,4 @@
-namespace EllipsisDraw
+namespace CircleDraw
 {
     internal static class Program
     {
