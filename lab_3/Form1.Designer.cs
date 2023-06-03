@@ -39,13 +39,13 @@
             this.lDivisions = new System.Windows.Forms.Label();
             this.tlpOuter = new System.Windows.Forms.TableLayoutPanel();
             this.tlpSide = new System.Windows.Forms.TableLayoutPanel();
+            this.tbLightsCount = new System.Windows.Forms.TextBox();
             this.dgvLights = new System.Windows.Forms.DataGridView();
             this.X = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Y = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Z = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Color = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lLightsCount = new System.Windows.Forms.Label();
-            this.tbLightsCount = new System.Windows.Forms.TextBox();
             this.tlpOuter.SuspendLayout();
             this.tlpSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLights)).BeginInit();
@@ -67,7 +67,7 @@
             this.AnT.Location = new System.Drawing.Point(0, 0);
             this.AnT.Margin = new System.Windows.Forms.Padding(0);
             this.AnT.Name = "AnT";
-            this.AnT.Size = new System.Drawing.Size(827, 647);
+            this.AnT.Size = new System.Drawing.Size(921, 661);
             this.AnT.StencilBits = ((byte)(0));
             this.AnT.TabIndex = 0;
             this.AnT.Load += new System.EventHandler(this.AnT_Load);
@@ -97,9 +97,9 @@
             // tbRadius
             // 
             this.tbRadius.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbRadius.Location = new System.Drawing.Point(128, 299);
+            this.tbRadius.Location = new System.Drawing.Point(122, 299);
             this.tbRadius.Name = "tbRadius";
-            this.tbRadius.Size = new System.Drawing.Size(132, 21);
+            this.tbRadius.Size = new System.Drawing.Size(138, 23);
             this.tbRadius.TabIndex = 3;
             this.tbRadius.Text = "5";
             this.tbRadius.TextChanged += new System.EventHandler(this.tb_TextChanged);
@@ -107,9 +107,9 @@
             // tbHeight
             // 
             this.tbHeight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbHeight.Location = new System.Drawing.Point(128, 326);
+            this.tbHeight.Location = new System.Drawing.Point(122, 328);
             this.tbHeight.Name = "tbHeight";
-            this.tbHeight.Size = new System.Drawing.Size(132, 21);
+            this.tbHeight.Size = new System.Drawing.Size(138, 23);
             this.tbHeight.TabIndex = 4;
             this.tbHeight.Text = "5";
             this.tbHeight.TextChanged += new System.EventHandler(this.tb_TextChanged);
@@ -117,9 +117,9 @@
             // tbDivisions
             // 
             this.tbDivisions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbDivisions.Location = new System.Drawing.Point(128, 353);
+            this.tbDivisions.Location = new System.Drawing.Point(122, 357);
             this.tbDivisions.Name = "tbDivisions";
-            this.tbDivisions.Size = new System.Drawing.Size(132, 21);
+            this.tbDivisions.Size = new System.Drawing.Size(138, 23);
             this.tbDivisions.TabIndex = 5;
             this.tbDivisions.Text = "5";
             this.tbDivisions.TextChanged += new System.EventHandler(this.tb_TextChanged);
@@ -130,27 +130,27 @@
             this.lRadius.Location = new System.Drawing.Point(3, 302);
             this.lRadius.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.lRadius.Name = "lRadius";
-            this.lRadius.Size = new System.Drawing.Size(47, 15);
+            this.lRadius.Size = new System.Drawing.Size(45, 15);
             this.lRadius.TabIndex = 6;
             this.lRadius.Text = "Радиус";
             // 
             // lHeight
             // 
             this.lHeight.AutoSize = true;
-            this.lHeight.Location = new System.Drawing.Point(3, 329);
+            this.lHeight.Location = new System.Drawing.Point(3, 331);
             this.lHeight.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.lHeight.Name = "lHeight";
-            this.lHeight.Size = new System.Drawing.Size(51, 15);
+            this.lHeight.Size = new System.Drawing.Size(47, 15);
             this.lHeight.TabIndex = 7;
             this.lHeight.Text = "Высота";
             // 
             // lDivisions
             // 
             this.lDivisions.AutoSize = true;
-            this.lDivisions.Location = new System.Drawing.Point(3, 356);
+            this.lDivisions.Location = new System.Drawing.Point(3, 360);
             this.lDivisions.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.lDivisions.Name = "lDivisions";
-            this.lDivisions.Size = new System.Drawing.Size(119, 15);
+            this.lDivisions.Size = new System.Drawing.Size(113, 15);
             this.lDivisions.TabIndex = 8;
             this.lDivisions.Text = "Количество граней";
             // 
@@ -170,7 +170,7 @@
             this.tlpOuter.Name = "tlpOuter";
             this.tlpOuter.RowCount = 1;
             this.tlpOuter.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpOuter.Size = new System.Drawing.Size(1090, 647);
+            this.tlpOuter.Size = new System.Drawing.Size(1184, 661);
             this.tlpOuter.TabIndex = 10;
             // 
             // tlpSide
@@ -192,7 +192,7 @@
             this.tlpSide.Controls.Add(this.lLightsCount, 0, 1);
             this.tlpSide.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpSide.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tlpSide.Location = new System.Drawing.Point(827, 0);
+            this.tlpSide.Location = new System.Drawing.Point(921, 0);
             this.tlpSide.Margin = new System.Windows.Forms.Padding(0);
             this.tlpSide.Name = "tlpSide";
             this.tlpSide.RowCount = 6;
@@ -203,8 +203,19 @@
             this.tlpSide.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpSide.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpSide.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpSide.Size = new System.Drawing.Size(263, 647);
+            this.tlpSide.Size = new System.Drawing.Size(263, 661);
             this.tlpSide.TabIndex = 11;
+            // 
+            // tbLightsCount
+            // 
+            this.tbLightsCount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbLightsCount.Location = new System.Drawing.Point(122, 163);
+            this.tbLightsCount.Margin = new System.Windows.Forms.Padding(3, 7, 3, 3);
+            this.tbLightsCount.Name = "tbLightsCount";
+            this.tbLightsCount.Size = new System.Drawing.Size(138, 23);
+            this.tbLightsCount.TabIndex = 12;
+            this.tbLightsCount.Text = "1";
+            this.tbLightsCount.TextChanged += new System.EventHandler(this.tb_TextChanged);
             // 
             // dgvLights
             // 
@@ -263,32 +274,21 @@
             this.lLightsCount.Location = new System.Drawing.Point(3, 159);
             this.lLightsCount.Margin = new System.Windows.Forms.Padding(3);
             this.lLightsCount.Name = "lLightsCount";
-            this.lLightsCount.Size = new System.Drawing.Size(111, 30);
+            this.lLightsCount.Size = new System.Drawing.Size(104, 30);
             this.lLightsCount.TabIndex = 11;
             this.lLightsCount.Text = "Количество\r\nисточников света";
             this.lLightsCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tbLightsCount
-            // 
-            this.tbLightsCount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbLightsCount.Location = new System.Drawing.Point(128, 163);
-            this.tbLightsCount.Margin = new System.Windows.Forms.Padding(3, 7, 3, 3);
-            this.tbLightsCount.Name = "tbLightsCount";
-            this.tbLightsCount.Size = new System.Drawing.Size(132, 21);
-            this.tbLightsCount.TabIndex = 12;
-            this.tbLightsCount.Text = "1";
-            this.tbLightsCount.TextChanged += new System.EventHandler(this.tb_TextChanged);
             // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 647);
+            this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.tlpOuter);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "formMain";
-            this.Text = "Form1";
+            this.ShowIcon = false;
             this.tlpOuter.ResumeLayout(false);
             this.tlpOuter.PerformLayout();
             this.tlpSide.ResumeLayout(false);

@@ -104,14 +104,12 @@ namespace KG3
             try
             {
                 if (!string.IsNullOrEmpty(tbLightsCount.Text))
-                {
                     dgvLights.RowCount = int.Parse(tbLightsCount.Text);
-                }
             }
             catch (Exception)
             {
                 MessageBox.Show("Ошибка входных данных!");
-                tbLightsCount.Clear();
+                tbLightsCount.Text = dgvLights.RowCount.ToString();
             }
 
             try
@@ -122,7 +120,7 @@ namespace KG3
             catch (Exception)
             {
                 MessageBox.Show("Ошибка входных данных!");
-                tbRadius.Clear();
+                tbRadius.Text = _Radius.ToString();
             }
 
             try
@@ -133,7 +131,7 @@ namespace KG3
             catch (Exception)
             {
                 MessageBox.Show("Ошибка входных данных!");
-                tbHeight.Clear();
+                tbHeight.Text = _Height.ToString();
             }
 
             try
@@ -144,7 +142,7 @@ namespace KG3
             catch (Exception)
             {
                 MessageBox.Show("Ошибка входных данных!");
-                tbDivisions.Clear();
+                tbDivisions.Text = _Slices.ToString();
             }
         }
     }

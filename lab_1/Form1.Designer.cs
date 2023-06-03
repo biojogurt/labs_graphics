@@ -30,20 +30,20 @@
         {
             pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            numericUpDown3 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
             label1 = new Label();
-            label2 = new Label();
-            button2 = new Button();
-            label3 = new Label();
-            button1 = new Button();
             numericUpDown1 = new NumericUpDown();
+            label2 = new Label();
+            numericUpDown2 = new NumericUpDown();
+            label3 = new Label();
+            numericUpDown3 = new NumericUpDown();
+            button1 = new Button();
+            button2 = new Button();
             colorDialog1 = new ColorDialog();
             ((System.ComponentModel.ISupportInitialize) pictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize) numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) numericUpDown3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -92,17 +92,37 @@
             tableLayoutPanel1.Size = new Size(800, 450);
             tableLayoutPanel1.TabIndex = 1;
             // 
-            // numericUpDown3
+            // label1
             // 
-            numericUpDown3.AutoSize = true;
-            numericUpDown3.Dock = DockStyle.Top;
-            numericUpDown3.Location = new Point(3, 124);
-            numericUpDown3.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
-            numericUpDown3.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(103, 23);
-            numericUpDown3.TabIndex = 11;
-            numericUpDown3.Value = new decimal(new int[] { 80, 0, 0, 0 });
+            label1.AutoSize = true;
+            label1.Location = new Point(3, 3);
+            label1.Margin = new Padding(3);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Центр (x)";
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.AutoSize = true;
+            numericUpDown1.Dock = DockStyle.Top;
+            numericUpDown1.Location = new Point(3, 24);
+            numericUpDown1.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
+            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(103, 23);
+            numericUpDown1.TabIndex = 9;
+            numericUpDown1.Value = new decimal(new int[] { 110, 0, 0, 0 });
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(3, 53);
+            label2.Margin = new Padding(3);
+            label2.Name = "label2";
+            label2.Size = new Size(58, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Центр (y)";
             // 
             // numericUpDown2
             // 
@@ -116,39 +136,6 @@
             numericUpDown2.TabIndex = 10;
             numericUpDown2.Value = new decimal(new int[] { 110, 0, 0, 0 });
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(3, 3);
-            label1.Margin = new Padding(3);
-            label1.Name = "label1";
-            label1.Size = new Size(58, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Центр (x)";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(3, 53);
-            label2.Margin = new Padding(3);
-            label2.Name = "label2";
-            label2.Size = new Size(58, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Центр (y)";
-            // 
-            // button2
-            // 
-            button2.AutoSize = true;
-            button2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            button2.Dock = DockStyle.Top;
-            button2.Location = new Point(3, 184);
-            button2.Name = "button2";
-            button2.Size = new Size(103, 25);
-            button2.TabIndex = 6;
-            button2.Text = "Построить круг";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -158,6 +145,18 @@
             label3.Size = new Size(45, 15);
             label3.TabIndex = 8;
             label3.Text = "Радиус";
+            // 
+            // numericUpDown3
+            // 
+            numericUpDown3.AutoSize = true;
+            numericUpDown3.Dock = DockStyle.Top;
+            numericUpDown3.Location = new Point(3, 124);
+            numericUpDown3.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
+            numericUpDown3.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown3.Name = "numericUpDown3";
+            numericUpDown3.Size = new Size(103, 23);
+            numericUpDown3.TabIndex = 11;
+            numericUpDown3.Value = new decimal(new int[] { 80, 0, 0, 0 });
             // 
             // button1
             // 
@@ -172,17 +171,18 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // numericUpDown1
+            // button2
             // 
-            numericUpDown1.AutoSize = true;
-            numericUpDown1.Dock = DockStyle.Top;
-            numericUpDown1.Location = new Point(3, 24);
-            numericUpDown1.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(103, 23);
-            numericUpDown1.TabIndex = 9;
-            numericUpDown1.Value = new decimal(new int[] { 110, 0, 0, 0 });
+            button2.AutoSize = true;
+            button2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            button2.Dock = DockStyle.Top;
+            button2.Location = new Point(3, 184);
+            button2.Name = "button2";
+            button2.Size = new Size(103, 25);
+            button2.TabIndex = 6;
+            button2.Text = "Построить круг";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // colorDialog1
             // 
@@ -197,13 +197,13 @@
             ClientSize = new Size(800, 450);
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
-            Text = "Form1";
+            ShowIcon = false;
             ((System.ComponentModel.ISupportInitialize) pictureBox1).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize) numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize) numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize) numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize) numericUpDown3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
