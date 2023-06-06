@@ -111,7 +111,6 @@ namespace lab_2
         public Color ColorWithLight(Polygon poly)
         {
             double R = 20, G = 20, B = 20;
-
             Vertex norm = poly.Normal;
             Vertex ray = LightPoint;
 

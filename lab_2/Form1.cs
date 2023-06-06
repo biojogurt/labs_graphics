@@ -6,7 +6,7 @@ namespace lab_2
 {
     public partial class formMain : Form
     {
-        private Color brush = Color.Gray;
+        private Color Brush { get; set; } = Color.Gray;
 
         public formMain()
         {
@@ -15,7 +15,7 @@ namespace lab_2
 
         private void btnPaint_Click(object sender, EventArgs e)
         {
-            Scene s = new Scene(pbPyramide.Height, pbPyramide.Width, brush);
+            Scene s = new Scene(pbPyramide.Height, pbPyramide.Width, Brush);
             s.MakePyramide(int.Parse(textBoxBoxSize.Text), int.Parse(textBoxBaseRadius.Text), int.Parse(textBoxSideCount.Text));
             s.AddCamera(new Camera(new Vertex(textBoxCamPos.Text), new Vertex(textBoxCamDir.Text).Minus(new Vertex(textBoxCamPos.Text)), (double) udAngle.Value));
             s.LightPoint = new Vertex(textBoxLights.Text);
@@ -31,7 +31,7 @@ namespace lab_2
         {
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
-                brush = colorDialog.Color;
+                Brush = colorDialog.Color;
             }
         }
     }
