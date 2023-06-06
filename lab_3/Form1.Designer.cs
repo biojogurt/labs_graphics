@@ -1,4 +1,4 @@
-﻿namespace KG3
+﻿namespace lab_3
 {
     partial class formMain
     {

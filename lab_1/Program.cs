@@ -1,4 +1,4 @@
-namespace CircleDraw
+namespace lab_1
 {
     internal static class Program
     {

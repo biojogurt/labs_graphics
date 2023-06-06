@@ -1,4 +1,4 @@
-﻿namespace CircleDraw
+﻿namespace lab_1
 {
     partial class Form1
     {

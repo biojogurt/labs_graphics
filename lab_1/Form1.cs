@@ -1,4 +1,4 @@
-namespace CircleDraw
+namespace lab_1
 {
     public partial class Form1 : Form
     {

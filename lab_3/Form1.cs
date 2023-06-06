@@ -4,9 +4,7 @@ using Tao.OpenGl;
 using Tao.FreeGlut;
 using System.Drawing;
 
-// моя: dabb
-
-namespace KG3
+namespace lab_3
 {
     public partial class formMain : Form
     {
